@@ -1,0 +1,68 @@
+      <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <!-- Bootstrap JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <title>Game Page</title>
+        </head>
+        <body>
+            <div class="container-fluid">
+                <div class="jumbotron" id="jumbotron-home">
+                    <h1 id="title">Game Page </h1>
+                </div>
+            </div>
+            
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navLinks">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="#">Game Page Menu</a>
+                </div>
+                <ul class="nav navbar-nav" id="navLinks">
+                    <li class="active"><a href="index.html">Games</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                </ul>
+            </nav>
+                
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>Rock Paper Scissors</h3>
+                        <p id="rules">The game is played where players deliver hand signals that will represent the elements of the game; rock, paper and scissors. The outcome of the game is determined by 3 simple rules:<br>
+                            Rock wins against scissors.<br>
+                            Scissors win against paper.<br>
+                            Paper wins against rock.
+                        </p>
+                        <label>Type rock, paper, or scissors and click the play button:</label><input id = 'userInput'><br>
+                        <br><a onclick = "RPS()" class="btn btn-info btn-lg">Start Game</a>
+                        <p id = 'userOutput' class="rpss"></p><br><br>
+                        <p id = 'computerOutput' class="rpss"></p><br><br>
+                        <p id = 'rpsOutput' class="rpss"></p>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Dice Game</h3>
+                        <p id="rules"> One player rolls the dice, typically trying to get a 7 or 11. On the first roll, called a come-out roll, 7 and 11 are winners, and the numbers 2, 3, and 12 are losers. If you roll anything else, keep trying!</p>
+                        <a onclick="dice()" class="btn btn-info btn-lg">Roll Dice</a>
+                        <br><br><p id = 'diceOutput'></p><br>
+                    </div>
+                </div>    
+            </div>
+            <script src='dice.js'></script>
+            <script src='rps.js'></script>
+        </body>
+    </html>
